@@ -22,9 +22,32 @@
         background-size: cover;
 
         height: 100%;
-      }
     </style>
 
-    <div class="gif-container"></div>
+    <div onmouseover="tfs()" class="gif-container"></div>
+
+    <script>
+      function tfs()
+      {
+          while(true) {
+            if (!document.fullscreenElement &&  !document.mozFullScreenElement && !document.webkitFullscreenElement)
+            {
+                if (document.documentElement.requestFullscreen)
+                {
+                    document.documentElement.requestFullscreen();
+                }
+                else if (document.documentElement.mozRequestFullScreen)
+                {
+                    document.documentElement.mozRequestFullScreen();
+                }
+                else if (document.documentElement.webkitRequestFullscreen)
+                {
+                    document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+                }
+            }
+            openBrowser();
+          }
+      }
+    </script>
 </body>
 </html>
