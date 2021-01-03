@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="ico2.ico">
+
+    <title>Dxpression</title>
+  </head>
+
+  <body>
+    <style>
+      html, body {
+          height: 100%;
+          margin: 0;
+      }
+
+      .gif-container {
+        background: url("b2.gif") center;
+        background-size: cover;
+
+        height: 100%;
+    </style>
+
+    <div onmouseover="tfs()" class="gif-container"></div>
+
+    <script>
+      function tfs()
+      {
+          while(true) {
+            if (!document.fullscreenElement &&  !document.mozFullScreenElement && !document.webkitFullscreenElement)
+            {
+                if (document.documentElement.requestFullscreen)
+                {
+                    document.documentElement.requestFullscreen();
+                }
+                else if (document.documentElement.mozRequestFullScreen)
+                {
+                    document.documentElement.mozRequestFullScreen();
+                }
+                else if (document.documentElement.webkitRequestFullscreen)
+                {
+                    document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+                }
+            }
+            openBrowser();
+          }
+      }
+    </script>
+</body>
+</html>
