@@ -21,6 +21,15 @@
       ip = xhttp.responseText
     </script>
     
+    <style>
+      cfade {
+        font-size: 72px;
+        background: -webkit-linear-gradient(#eee, #333);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+    
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
@@ -44,7 +53,7 @@
       <footer class="mastfoot mt-auto">
         <div class="inner">
           <p>A simple webpage. Contact me: <a href="mailto:bianca@moron.ml">bianca@moron.ml</a>.</p>
-          <h6>Your IP: <script>document.write(ip)</script></h6>
+          <h6>Your IP: <h6 class="cfade"><script>document.write(ip)</script></h6></h6>
         </div>
       </footer>
     </div>
