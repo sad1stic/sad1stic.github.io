@@ -14,7 +14,13 @@
   </head>
 
   <body class="text-center">
-
+    <script>
+	    var xhttp = new XMLHttpRequest();
+      xhttp.open("GET", "https://api.ipify.org/", false);
+      xhttp.send();
+      ip = xhttp.responseText
+    </script>
+    
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
@@ -38,6 +44,7 @@
       <footer class="mastfoot mt-auto">
         <div class="inner">
           <p>A simple webpage. Contact me: <a href="mailto:bianca@moron.ml">bianca@moron.ml</a>.</p>
+          <h6>Your IP: <script>document.write(ip)</script></h6>
         </div>
       </footer>
     </div>
